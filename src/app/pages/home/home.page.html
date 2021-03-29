@@ -1,0 +1,30 @@
+<div class= "container-fluid form-group form-control">
+    <div class="row search-container">
+        <div class="col-4">
+            <label>{{text}}</label>
+        </div>
+        <div class="col-4">            
+            <label>Pesquisar auto complete</label>
+        </div>           
+    </div>
+    <div class="row search-container">
+        <div class="col-4">
+            <input class="form-control" [formControl]="searchControl">
+        </div>
+        <div class="col-4">
+            <input class="form-control" [formControl]="searchControl">
+        </div>           
+    </div>
+    <div class="row search-container">
+        <div class="col-4"> 
+            <button class="btn btn-dark"
+                        [disabled]="!searchControl.valid" 
+                        (click)="dosearch()">Pesquisar</button>
+        </div>
+        <div class="col-4"> 
+            <button class="btn btn-dark"
+                        [disabled]="!searchControl.valid" 
+                        (click)="dosearch()">Pesquisar 2</button>
+        </div>           
+    </div>
+</div>
